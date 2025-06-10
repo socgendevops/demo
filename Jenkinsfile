@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'maven-label' }
 
     tools {
         // Install the Maven version configured as "maven-3.9.10" and add it to the path.
