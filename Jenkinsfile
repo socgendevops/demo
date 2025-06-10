@@ -10,7 +10,8 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'main', url: 'https://github.com/gscprojectdemo/maven-spring.git'
+                //git branch: 'main', url: 'https://github.com/gscprojectdemo/maven-spring.git'
+                checkout scm
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
