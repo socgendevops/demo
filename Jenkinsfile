@@ -13,7 +13,7 @@ pipeline {
                 //git branch: 'main', url: 'https://github.com/gscprojectdemo/maven-spring.git'
                 checkout scm
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean deploy"
+                sh "mvn -Dmaven.test.failure.ignore=true clean install"
             }
 
             post {
