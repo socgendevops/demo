@@ -28,6 +28,7 @@ pipeline {
          stage('Deploy') {
             steps {
                 echo "deployment step here"
+                sh "python3 abc.py"
             }
         }
         stage('test') {
